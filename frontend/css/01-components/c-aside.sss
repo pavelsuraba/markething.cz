@@ -1,0 +1,42 @@
+.c-aside
+    @include ff($font-secondary)
+    @include fz(16)
+
+.c-aside__img
+    position: relative
+    img
+        width: 100%
+    .c-stamp--single
+        padding-left: 0
+
+.c-aside__heading
+    @include fz(16)
+    font-weight: 700
+    line-height: 1
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
+.c-aside__author
+    margin: 20px 0 0 0
+    p
+        line-height: 1.5
+        margin: 10px 0 0 0
+    @include bp($desktop)
+        margin: 30px 0 0 0
+
+.c-aside__author-social
+    margin: 20px 0 0 0
+    ul
+        margin: 10px 0 0 0
+        @include bp($desktop)
+            margin: 15px 0 0 0
+    li
+        line-height: 1
+    li + li
+        margin: 8px 0 0 0
+    a
+        text-decoration: underline
+        &:hover
+            text-decoration: none
+    @include bp($desktop)
+        margin: 28px 0 0 0

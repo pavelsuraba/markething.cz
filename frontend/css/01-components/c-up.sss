@@ -1,0 +1,21 @@
+.c-up
+    color: $black
+    background-color: $white
+    padding: 15px 25px 15px 25px
+    @include ff($font-secondary)
+    letter-spacing: 1px
+    cursor: pointer
+    display: flex
+    align-items: center
+    svg
+        margin: 0 18px 1px 0
+    &:hover
+        .c-up__text
+            text-decoration: underline
+    @include bp($desktop)
+        padding: 20px 35px 20px 35px
+
+.c-up__text
+    text-transform: uppercase
+    @include fz(16)
+    line-height: 1

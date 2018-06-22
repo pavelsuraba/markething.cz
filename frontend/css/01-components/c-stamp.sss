@@ -1,0 +1,61 @@
+.c-stamp
+    position: relative
+    display: flex
+    text-transform: uppercase
+    @include fz(13)
+    line-height: 1
+    @include ff($font-secondary)
+    padding: 18px 20px 13px 25px
+    background-color: $white
+    z-index: 2
+    @include bp($desktop)
+        padding: 23px 25px 22px 25px
+
+.c-stamp--single
+    @include bp($desktop)
+        padding: 18px 20px 18px 20px
+
+.c-stamp--top-left
+    position: absolute
+    top: 0
+    left: 0
+    padding-left: 20px
+    z-index: 2
+    @include bp($desktop)
+        padding-left: 0
+
+.c-stamp--bottom-left
+    position: absolute
+    bottom: 0
+    left: 0
+    padding-left: 20px
+    z-index: 2
+    @include bp($desktop)
+        padding-left: 0
+
+.c-stamp--bottom-right
+    position: absolute
+    bottom: 0
+    left: 0
+    padding-left: 20px
+    @include bp($desktop)
+        left: auto
+        right: 0
+        padding-right: 0
+
+.c-stamp__link
+    position: relative
+    a
+        text-decoration: underline
+        &:hover
+            text-decoration: none
+    .c-stamp__date + &
+        padding: 0 0 0 70px
+        &:before
+            content: ''
+            position: absolute
+            top: 5px
+            left: 20px
+            width: 30px
+            height: 1px
+            background-color: $grey-light

@@ -1,0 +1,33 @@
+.c-menu
+    position: relative
+
+.c-menu__content
+    margin: 0 0 1px 0
+    cursor: pointer
+    transition: all 250ms ease
+    color: $white
+    &:before
+        content: ''
+        position: absolute
+        top: -10px
+        right: -10px
+        bottom: -8px
+        left: -10px
+    &:hover
+        color: $red
+    svg
+        margin: 0 0 0 10px
+
+.c-menu__content--close
+    display: none
+
+.c-menu__inner
+    display: flex
+    align-items: center
+
+.c-menu__text
+    @include ff($font-secondary)
+    text-transform: uppercase
+    @include fz(14)
+    letter-spacing: 1px
+    margin: 2px 0 0 0

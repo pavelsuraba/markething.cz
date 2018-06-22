@@ -1,0 +1,28 @@
+.c-heading
+    @include ff($font-secondary)
+
+.c-heading--primary
+    font-weight: 700
+
+.c-heading--secondary
+    color: $white
+    font-weight: 200
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
+.c-heading--small
+    @include fz(24)
+    line-height: 1.20
+    @include bp($large-mobile)
+        @include fz(30)
+    @include bp($desktop)
+        @include fz(50)
+
+.c-heading--large
+    @include fz(30)
+    line-height: 1.20
+    @include bp($large-mobile)
+        @include fz(36)
+    @include bp($desktop)
+        @include fz(80)
+        line-height: 1.05

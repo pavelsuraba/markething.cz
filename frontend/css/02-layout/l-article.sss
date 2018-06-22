@@ -1,0 +1,101 @@
+.l-article
+    padding: 30px 0 30px 0
+    overflow: hidden
+    @include bp($desktop)
+        padding: 70px 0 40px 0
+
+.l-article__heading
+    max-width: 950px
+
+.l-article__wrapper
+    display: flex
+    flex-wrap: wrap
+    margin: 10px 0 0 0
+    @include bp($desktop)
+        margin: 45px 0 0 0
+
+.l-article__aside
+    order: 2
+    margin: 20px 0 0 0
+    width: $aside-width
+    @include bp($desktop)
+        margin: 10px 0 0 0
+        order: 1
+
+.l-article__content
+    order: 1
+    width: 100%
+    > p
+        margin: 15px 0 15px 0
+        @include bp($desktop)
+            margin: 40px 0 40px 0
+    > p:first-of-type
+        margin-top: 0
+    @include bp($desktop)
+        width: calc(100% - $aside-width)
+        padding: 0 0 0 100px
+        order: 2
+
+.l-article__img
+    position: relative
+    margin: 20px -20px 20px -20px
+    img
+        width: 100%
+    @include bp($desktop)
+        margin: 50px -200px 50px 0
+
+.l-article__quote
+    text-align: center
+    @include fz(20)
+    line-height: 1.25
+    @include bp($desktop)
+        @include fz(60)
+        line-height: 1.25
+
+.l-article__quote.l-article__quote
+    margin: 20px 0 20px 0
+    @include bp($desktop)
+        margin: 65px 0 60px calc(-$aside-width - $aside-padding)
+
+.l-article__video
+    position: relative
+    margin: 20px -20px 20px -20px
+    &:before
+        display: block
+        content: ""
+        width: 100%
+        padding-top: calc((9 / 16) * 100%)
+    @include bp($desktop)
+        margin: 65px 0 65px calc(-$aside-width - $aside-padding)
+
+.l-article__video-inner
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    iframe
+        width: 100%
+        height: 100%
+
+.l-article__caption
+    position: relative
+    margin: 20px -20px 15px -20px
+    img
+        width: 100%
+    @include bp($desktop)
+        margin: 65px 0 65px 0
+
+.l-article__caption-text
+    @include ff($font-secondary)
+    @include fz(14)
+    line-height: 1.4
+    color: #282828
+    margin: 10px 0 0 20px
+    @include bp($desktop)
+        position: absolute
+        top: 60px
+        left: calc(-$aside-width - $aside-padding)
+        text-align: right
+        max-width: 290px
+        @include fz(16)

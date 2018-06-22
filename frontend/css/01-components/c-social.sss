@@ -1,0 +1,24 @@
+.c-social
+    position: relative
+    display: flex
+    align-items: center
+
+.c-social__item
+    position: relative
+    transition: all 250ms ease
+    list-style-type: none
+    & + &
+        margin: 0 0 0 33px
+    a
+        display: block
+        &:before
+            content: ''
+            position: absolute
+            top: -5px
+            right: -10px
+            bottom: -5px
+            left: -10px
+    svg
+        display: block
+    &:hover
+        color: $red

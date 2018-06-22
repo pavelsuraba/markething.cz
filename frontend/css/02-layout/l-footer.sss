@@ -1,0 +1,135 @@
+.l-footer
+    position: relative
+    padding: 80px 0 15px 0
+    background-color: $black
+    color: #666666
+    @include ff($font-secondary)
+    overflow: hidden
+    .c-container
+        max-width: 1300px
+    @include bp($desktop)
+        padding: 130px 0 50px 0
+
+.l-footer__up
+    position: absolute
+    top: 0
+    right: 0
+
+.l-footer__wrapper
+    position: relative
+    @include bp($desktop)
+        padding: 0 0 0 300px
+        &:before
+            content: ''
+            position: absolute
+            left: -230px
+            top: 0
+            width: 447px
+            height: 401px
+            background-image: url($img/png/logo-large.png)
+            background-repeat-y: no-repeat
+            background-size: 447px 401px
+            @include retina()
+                background-image: url($img/png/logo-large@2x.png)
+
+.l-footer__content
+    display: flex
+    flex-wrap: wrap
+
+.l-footer__content-item
+    margin: 0 0 35px 0
+    width: 100%
+    @include bp($desktop)
+        width: 25%
+        &:last-of-type
+            width: 50%
+
+.l-footer__heading
+    color: $white
+    @include ff($font-main)
+    @include fz(18)
+    line-height: 1
+    font-weight: 200
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    margin: 0 0 12px 0
+    @include bp($desktop)
+        @include fz(20)
+        margin: 0 0 30px 0
+
+.l-footer__list
+    padding: 5px 0 0 0
+    li + li
+        margin: 10px 0 0 0
+    li
+        line-height: 1
+    a
+        @include fz(16)
+        &:hover
+            color: $white
+
+.l-footer__info
+    @include ff($font-main)
+    @include fz(15)
+    line-height: 1.9
+
+.l-footer__info-more
+    margin: 15px 0 0 0
+    @include fz(16)
+    a
+        display: flex
+        align-items: center
+        svg
+            margin: 0 0 2px 10px
+        &:hover
+            color: $white
+    @include bp($desktop)
+        margin: 30px 0 0 0
+
+.l-footer__outro
+    position: relative
+    padding: 40px 0 0 0
+    display: flex
+    align-items: center
+    flex-direction: column
+    &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 1px
+        background-color: $grey-light
+        opacity: 0.35
+    @include bp($desktop)
+        margin: 35px 0 0 0
+        padding: 60px 0 0 0
+        flex-direction: row
+
+.l-footer__outro-item
+    width: 100%
+    margin: 0 0 30px 0
+    a
+        display: block
+    @include bp($desktop)
+        width: 50%
+
+.l-footer__author
+    display: flex
+    align-items: center
+    @include fz(16)
+    line-height: 1
+    margin: 0 0 0 5px
+    svg
+        margin: 0 20px 0 0
+        @include bp($desktop)
+            margin: 0 30px 0 0
+    @include bp($desktop)
+        margin: 0
+
+.l-footer__author-wrapper
+    p + p
+        margin: 10px 0 0 0
+    a
+        &:hover
+            text-decoration: underline

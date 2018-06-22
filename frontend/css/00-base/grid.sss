@@ -1,0 +1,55 @@
+/*==========================================================================
+  Grid
+  ==========================================================================*/
+
+%container
+    position: relative
+    margin: 0 auto
+
+.c-container
+    @extend %container
+
+.c-container--small
+    max-width: $grid-container-small
+    padding: 0 20px 0 20px
+    @include bp($desktop)
+        padding: 0 $grid-pad 0 $grid-pad
+
+.c-container--large
+    max-width: $grid-container-large
+    padding: 0 20px 0 20px
+    @include bp($desktop)
+        padding: 0 $grid-pad 0 $grid-pad
+
+.c-row
+    display: flex
+    flex-wrap: wrap
+
+.c-row--small
+    margin-right: -20px
+    margin-left: -20px
+    @include bp($desktop)
+        margin-right: calc(-$grid-pad/2)
+        margin-left: calc(-$grid-pad/2)
+
+.c-row--large
+    margin-right: -20px
+    margin-left: -20px
+    @include bp($desktop)
+        margin-right: calc(-$grid-pad-large/2)
+        margin-left: calc(-$grid-pad-large/2)
+
+.c-col
+    width: 100%
+    padding: 0 20px 0 20px
+    @include bp($desktop)
+        padding: 0 calc($grid-pad/2) 0 calc($grid-pad/2)
+
+.c-col--large
+    padding: 0 20px 0 20px
+    @include bp($desktop)
+        padding: 0 calc($grid-pad-large/2) 0 calc($grid-pad-large/2)
+
+.c-col--2
+    @include bp($desktop)
+        width: 50%

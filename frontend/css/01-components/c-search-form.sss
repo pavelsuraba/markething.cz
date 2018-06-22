@@ -1,0 +1,58 @@
+.c-search-form
+    position: relative
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    ::-webkit-input-placeholder
+        @include fz(16)
+        color: rgba(255,255,255, 0.5)
+    ::-moz-placeholder
+        @include fz(16)
+        color: rgba(255,255,255, 0.5)
+    :-ms-input-placeholder
+        @include fz(16)
+        color: rgba(255,255,255, 0.5)
+    :-moz-placeholder
+        @include fz(16)
+        color: rgba(255,255,255, 0.5)
+
+.c-search-form--mobile
+    max-width: 285px
+    margin: auto
+    padding: 0 0 13px 0
+    > div
+        width: 100%
+    @include bp($desktop)
+        max-width: 300px
+    ::-webkit-input-placeholder
+        @include fz(18)
+    ::-moz-placeholder
+        @include fz(18)
+    :-ms-input-placeholder
+        @include fz(18)
+    :-moz-placeholder
+        @include fz(18)
+
+.c-search-form--desktop
+    height: 100%
+    padding: 0 0 0 20px
+
+.c-search-form__submit
+    position: relative
+    border: none
+    background-color: transparent
+    color: $white
+    cursor: pointer
+    transition: all 250ms ease
+    &:before
+        content: ''
+        position: absolute
+        top: -10px
+        right: -10px
+        bottom: -10px
+        left: -10px
+    &:hover
+        color: $red
+    .c-search-form--mobile &
+        padding: 0 15px 2px 5px

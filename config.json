@@ -1,0 +1,11 @@
+{
+	"assetsPath": "frontend/",
+	"outputPath": "web/",
+	"staticTemplatesFolder": "",
+	"imageFolder": "img",
+	"svgFolder": "svg",
+	"cssFolder": "css",
+	"mainCssFiles": ["style"],
+	"mainJsFiles": ["main"],
+	"port": 8080
+}

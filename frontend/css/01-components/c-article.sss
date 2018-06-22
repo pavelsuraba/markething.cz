@@ -1,0 +1,60 @@
+.c-article
+    position: relative
+
+.c-article__img
+    position: relative
+    overflow: hidden
+    margin: 0 -20px 0 -20px
+    @include bp($desktop)
+        margin: 0
+    a
+        display: block
+    img
+        width: 100%
+        transform-origin: 50% 50%
+        transition: all 800ms ease
+        .is-hovering &
+            transform: scale(1.05)
+
+.c-article__info
+    margin: 18px 0 0 0
+    .c-article--primary &
+        display: flex
+        flex-direction: column
+        @include bp($desktop)
+            flex-direction: row
+            margin: 40px 0 0 0
+    @include bp($desktop)
+        margin: 22px 0 0 0
+
+.c-article__heading
+    @include ff($font-secondary)
+    font-weight: 700
+    @include fz(22)
+    line-height: 1.35
+    .c-article--primary &
+        @include bp($desktop)
+            width: 50%
+            @include fz(35)
+            line-height: 1.25
+        @include bp($large)
+            transform: translate(-75px, 0)
+    @include bp($desktop)
+        @include fz(23)
+    a
+        transition: color 350ms ease
+    .is-hovering &
+        a
+            color: $red
+
+.c-article__text
+    cursor: auto
+    @include fz(15)
+    margin: 10px 0 0 0
+    @include bp($desktop)
+        line-height: 1.9
+        margin: 13px 0 0 0
+    .c-article--primary &
+        @include bp($desktop)
+            width: 50%
+            margin: 0 0 0 60px

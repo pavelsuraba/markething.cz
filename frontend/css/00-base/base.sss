@@ -1,0 +1,36 @@
+/*==========================================================================
+  Base
+  ==========================================================================*/
+
+* , *:before , *:after
+    box-sizing: border-box
+
+*
+    margin: 0
+    padding: 0
+
+@-ms-viewport
+    width: device-width
+
+html
+    font-size: 93.75% // base - 15px
+    line-height: 1.6
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+    @include bp($desktop)
+        line-height: 1.7
+
+body
+    @include ff($font-main)
+    font-weight: 400
+    &.no-scroll
+        overflow: hidden
+    @include bp($desktop)
+        @include fz(19)
+
+.page
+    overflow: hidden
+
+.page__content
+    margin: 55px 0 0 0
+    @include bp($desktop)
+        margin: 0

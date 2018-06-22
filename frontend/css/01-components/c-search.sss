@@ -1,0 +1,24 @@
+.c-search
+    position: static
+
+.c-search__open, .c-search__close
+    cursor: pointer
+    transition: all 250ms ease
+    color: $white
+    &:before
+        content: ''
+        position: absolute
+        top: 5px
+        right: 0
+        bottom: 8px
+        left: 0
+        @include bp($desktop)
+            top: 15px
+            right: 15px
+            bottom: 15px
+            left: 15px
+    &:hover
+        color: $red
+
+.c-search__close
+    display: none

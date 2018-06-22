@@ -1,0 +1,37 @@
+.c-input
+    @include ff($font-secondary)
+    width: 100%
+    height: 100%
+    outline: none
+    @include fz(16)
+    line-height: normal
+    border: none
+    background-color: transparent
+    -webkit-appearance: none
+
+.c-input--primary
+    position: relative
+    border-bottom: 2px solid #cccccc
+    height: 50px
+    padding: 3px 0 0 0
+    &:focus
+        border-bottom: 2px solid $red
+
+.c-input--search-desktop
+    color: $white
+
+.c-input--search-mobile
+    position: relative
+    color: $white
+    @include fz(18)
+    & + span
+        position: absolute
+        left: 0
+        bottom: 0
+        display: block
+        width: 100%
+        height: 1px
+        background-color: #4d4d4d
+        transition: all 250ms ease
+    &:focus + span
+        background-color: $red

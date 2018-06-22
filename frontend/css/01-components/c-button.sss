@@ -1,0 +1,38 @@
+.c-btn
+    text-decoration: none
+    transition: all 250ms ease
+    text-transform: uppercase
+    border: none
+    cursor: pointer
+    padding: 0 15px
+    white-space: nowrap
+    letter-spacing: 1.5px
+    @include ff($font-secondary)
+    @include fz(14)
+    @include bp($desktop)
+        @include fz(16)
+        padding: 0 30px
+
+.c-btn--large
+    height: 50px
+    line-height: 52px
+    @include bp($desktop)
+        height: 60px
+        line-height: 64px
+
+.c-btn--small
+    height: 50px
+    line-height: 52px
+
+.c-btn--primary
+    color: $white
+    background-color: $black
+    &:hover
+        background-color: $red
+
+.c-btn--secondary
+    color: $white
+    border: 1px solid #404040
+    &:hover
+        background-color: $red
+        border: 1px solid $red
